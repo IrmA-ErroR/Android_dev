@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application 1"
 include(":app")
+include(":lesson1")
+include(":control_lesson1")
