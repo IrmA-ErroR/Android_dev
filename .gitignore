@@ -1,0 +1,38 @@
+# Игнорируем файлы Android Studio
+**/.idea/
+**/*.iml
+
+# Игнорируем файлы Gradle
+**/.gradle/
+**/build/
+**/captures/
+**/outputs/
+**/intermediates/
+**/generated/
+
+# Игнорируем локальные настройки Android SDK
+**/local.properties
+
+# Игнорируем APK и AAB файлы
+**/*.apk
+**/*.aab
+
+# Игнорируем файлы, созданные Android Lint
+**/lint/
+
+# Игнорируем файлы логов
+**/*.log
+
+# Игнорируем кеши и временные файлы
+**/.cxx/
+**/.externalNativeBuild/
+**/.DS_Store
+
+# Игнорируем файлы CI/CD (если не используешь)
+**/.gitlab-ci.yml
+**/.github/
+**/.vscode/
+
+# Игнорируем файлы macOS и Windows
+**/.DS_Store
+**/Thumbs.db
