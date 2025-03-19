@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="260dp"
+        android:background="#009688"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:accessibilityLiveRegion="none"
+            android:fontFamily="sans-serif"
+            android:text="\tSystemIntentsApp"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#FCF5FD"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/buttonCall"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="40dp"
+        android:text="Позвонить"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBrowser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBrowser"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="40dp"
+        android:text="Открыть браузер"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMaps"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="171dp"
+        android:text="Открыть карту"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
