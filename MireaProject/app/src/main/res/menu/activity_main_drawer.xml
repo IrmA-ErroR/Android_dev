@@ -24,5 +24,10 @@
             android:id="@+id/nav_browser"
             android:icon="@drawable/world_global_internet_earth_1024"
             android:title="Браузер" />
+        <item
+            android:id="@+id/nav_tap"
+            android:icon="@drawable/game"
+            android:title="Tap Game" />
+
     </group>
 </menu>

@@ -35,4 +35,10 @@
         android:label="Browser"
         tools:layout="@layout/fragment_nav_browser" />
 
+    <fragment
+        android:id="@+id/nav_tap"
+        android:name="com.mirea.kabanovasvetlana.mireaproject.ui.tap.TapFragment"
+        android:label="Tap Game"
+        tools:layout="@layout/fragment_tap" />
+
 </navigation>
