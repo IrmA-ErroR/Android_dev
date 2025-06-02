@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,20 +17,36 @@
         android:theme="@style/Theme.Lesson4"
         tools:targetApi="31">
         <activity
-            android:name=".CryptoLoader"
+            android:name=".WorkManagerActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LooperActivity"
+            android:name=".ServiceApp"
             android:exported="true">
         </activity>
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <activity
+            android:name=".MusicService"
+            android:exported="false" />
+        <activity
+            android:name=".CryptoLoader"
+            android:exported="true"></activity>
+        <activity
+            android:name=".LooperActivity"
+            android:exported="true" />
         <activity
             android:name=".DataThreadActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ThreadActivity"
             android:exported="true" />
