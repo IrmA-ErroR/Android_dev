@@ -7,3 +7,5 @@
 Практика 3 + MireaProject
 
 Практика 4 + MireaProject
+
+Практика 5 (init) + MireaProject

@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/home"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
@@ -28,6 +28,25 @@
             android:id="@+id/nav_tap"
             android:icon="@drawable/game"
             android:title="Tap Game" />
+        <item
+            android:id="@+id/nav_sensor"
+            android:icon="@drawable/temperature"
+            android:title="Батарея" />
+
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/camera"
+            android:title="Камера" />
+
+        <item
+            android:id="@+id/nav_microphone"
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:title="Микрофон" />
+
+        <item
+            android:id="@+id/nav_permission_status"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="Разрешения" />
 
     </group>
 </menu>

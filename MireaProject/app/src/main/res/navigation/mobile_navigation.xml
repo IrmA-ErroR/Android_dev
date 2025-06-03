@@ -41,4 +41,24 @@
         android:label="Tap Game"
         tools:layout="@layout/fragment_tap" />
 
+    <fragment
+        android:id="@+id/nav_sensor"
+        android:name="com.mirea.kabanovasvetlana.mireaproject.ui.SensorFragment"
+        android:label="Акселерометр" />
+
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="com.mirea.kabanovasvetlana.mireaproject.ui.CameraFragment"
+        android:label="Камера" />
+
+    <fragment
+        android:id="@+id/nav_microphone"
+        android:name="com.mirea.kabanovasvetlana.mireaproject.ui.MicrophoneFragment"
+        android:label="Микрофон" />
+
+    <fragment
+        android:id="@+id/nav_permission_status"
+        android:name="com.mirea.kabanovasvetlana.mireaproject.ui.PermissionsFragment"
+        android:label="Разрешения" />
+
 </navigation>

@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
+import androidx.work.Data;
 import androidx.fragment.app.Fragment;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
@@ -26,14 +26,10 @@ public class TapFragment extends Fragment {
     private TextView counterTextView;
     private Button tapButton;
     private SharedPreferences sharedPreferences;
-    private int repeatCount = 0;
-    private static final int MAX_REPEAT = 10;
     private Handler handler;
 
-
-    private final String COUNTER_KEY = "tap_counter";
-    private boolean isWorkScheduled = false;
-
+    private static final String COUNTER_KEY = "tap_counter";
+    private static final String ENABLE_WORK_KEY = "enable_background_task";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,10 +39,14 @@ public class TapFragment extends Fragment {
         tapButton = view.findViewById(R.id.tapButton);
         sharedPreferences = requireActivity().getSharedPreferences("TapPrefs", Context.MODE_PRIVATE);
 
-        // Старт фоновой задачи
-        scheduleRepeatingWork();
         handler = new Handler(Looper.getMainLooper());
         handler.post(updateRunnable);
+
+        // Запуск фоновой задачи если true
+        boolean enableWork = sharedPreferences.getBoolean(ENABLE_WORK_KEY, false);
+        if (enableWork) {
+            scheduleRepeatingWork(0);
+        }
 
         tapButton.setOnClickListener(v -> {
             int counter = sharedPreferences.getInt(COUNTER_KEY, 0) + 1;
@@ -71,9 +71,14 @@ public class TapFragment extends Fragment {
         }
     };
 
-    private void scheduleRepeatingWork() {
+    private void scheduleRepeatingWork(int repeatCount) {
+        Data inputData = new Data.Builder()
+                .putInt(COUNTER_KEY, repeatCount)
+                .build();
+
         OneTimeWorkRequest workRequest = new OneTimeWorkRequest.Builder(TapCounterWorker.class)
-                .setInitialDelay(100, TimeUnit.SECONDS)
+                .setInitialDelay(10, TimeUnit.SECONDS)
+                .setInputData(inputData)
                 .build();
 
         WorkManager.getInstance(requireContext())
