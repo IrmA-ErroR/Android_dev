@@ -8,4 +8,4 @@
 
 Практика 4 + MireaProject
 
-Практика 5 (init) + MireaProject
+Практика 5 + MireaProject
