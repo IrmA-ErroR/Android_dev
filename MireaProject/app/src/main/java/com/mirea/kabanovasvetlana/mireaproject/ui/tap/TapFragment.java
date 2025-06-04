@@ -59,7 +59,8 @@ public class TapFragment extends Fragment {
     }
 
     private void updateCounterView(int counter) {
-        counterTextView.setText("Счёт: " + counter);
+        counterTextView.setText(String.format("Счёт: %d", counter));
+
     }
 
     private final Runnable updateRunnable = new Runnable() {
