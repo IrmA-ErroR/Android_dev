@@ -30,7 +30,7 @@
             android:title="Tap Game" />
         <item
             android:id="@+id/nav_sensor"
-            android:icon="@drawable/temperature"
+            android:icon="@android:drawable/ic_dialog_alert"
             android:title="Батарея" />
 
         <item
@@ -47,6 +47,11 @@
             android:id="@+id/nav_permission_status"
             android:icon="@android:drawable/ic_dialog_info"
             android:title="Разрешения" />
+
+        <item
+            android:id="@+id/nav_files"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="Файлы" />
 
     </group>
 </menu>

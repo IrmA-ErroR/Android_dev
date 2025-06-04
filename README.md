@@ -10,4 +10,4 @@
 
 Практика 5 + MireaProject
 
-Практика 6
+Практика 6 + MireaProject

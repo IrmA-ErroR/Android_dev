@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".ui.PermissionsFragment">
+    tools:context=".PermissionsFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Загрузка..."
-            android:textSize="18sp"/>
+            android:textSize="14sp"/>
     </ScrollView>
 
 </FrameLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Build;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -54,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        View headerView = binding.navView.getHeaderView(0);
+        ImageView profileImage = headerView.findViewById(R.id.imageView);
+
+        // клик по аватарке
+        profileImage.setOnClickListener(v -> {
+            navController.navigate(R.id.nav_profile);
+            navController.navigate(R.id.nav_profile);
+            binding.drawerLayout.close();
+        });
     }
     private void checkAndRequestPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

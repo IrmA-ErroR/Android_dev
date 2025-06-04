@@ -1,4 +1,4 @@
-package com.mirea.kabanovasvetlana.mireaproject.ui;
+package com.mirea.kabanovasvetlana.mireaproject;
 
 import android.os.Bundle;
 import android.os.Build;
@@ -22,12 +22,6 @@ import android.content.pm.PackageManager;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.content.ContextCompat;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.core.content.ContextCompat;
-import android.content.pm.PackageManager;
-
-import com.mirea.kabanovasvetlana.mireaproject.R;
 
 public class SensorFragment extends Fragment {
 

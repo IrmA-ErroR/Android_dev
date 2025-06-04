@@ -1,4 +1,4 @@
-package com.mirea.kabanovasvetlana.mireaproject.ui;
+package com.mirea.kabanovasvetlana.mireaproject;
 
 import android.Manifest;
 import android.content.Intent;
@@ -19,8 +19,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.mirea.kabanovasvetlana.mireaproject.R;
 
 public class CameraFragment extends Fragment {
     private final Bitmap[] photoSlots = new Bitmap[4];

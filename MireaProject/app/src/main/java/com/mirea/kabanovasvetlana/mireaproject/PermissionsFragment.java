@@ -1,4 +1,4 @@
-package com.mirea.kabanovasvetlana.mireaproject.ui;
+package com.mirea.kabanovasvetlana.mireaproject;
 
 import android.os.Bundle;
 import android.Manifest;
@@ -12,9 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-
-
-import com.mirea.kabanovasvetlana.mireaproject.R;
 
 public class PermissionsFragment extends Fragment {
 
