@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/editTextName"
@@ -25,6 +25,7 @@
 
         <EditText
             android:id="@+id/editTextHobby"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Хобби" />
@@ -33,7 +34,27 @@
             android:id="@+id/buttonSave"
             android:text="Сохранить"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/textFirebaseEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Firebase email:"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="Выйти из аккаунта"
+            android:textColor="#FFFFFF" />
+
     </LinearLayout>
 
 </FrameLayout>

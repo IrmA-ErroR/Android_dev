@@ -53,5 +53,10 @@
             android:icon="@android:drawable/ic_input_get"
             android:title="Файлы" />
 
+        <item
+            android:id="@+id/nav_network"
+            android:icon="@android:drawable/radiobutton_off_background"
+            android:title="Фаза Луны" />
+
     </group>
 </menu>

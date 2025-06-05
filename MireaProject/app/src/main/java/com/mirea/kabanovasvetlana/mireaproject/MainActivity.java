@@ -7,10 +7,11 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.ImageView;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.tapFragment,
-                R.id.nav_sensor, R.id.nav_camera, R.id.nav_microphone, R.id.nav_permission_status)
+                R.id.nav_sensor, R.id.nav_camera, R.id.nav_microphone, R.id.nav_permission_status, R.id.nav_network)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -58,12 +59,25 @@ public class MainActivity extends AppCompatActivity {
 
         View headerView = binding.navView.getHeaderView(0);
         ImageView profileImage = headerView.findViewById(R.id.imageView);
-
-        // клик по аватарке
         profileImage.setOnClickListener(v -> {
             navController.navigate(R.id.nav_profile);
-            navController.navigate(R.id.nav_profile);
             binding.drawerLayout.close();
+        });
+
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.nav_home) {
+                NavOptions navOptions = new NavOptions.Builder()
+                        .setPopUpTo(R.id.nav_home, true)
+                        .build();
+                navController.navigate(R.id.nav_home, null, navOptions);
+            } else {
+                NavigationUI.onNavDestinationSelected(item, navController);
+            }
+
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
         });
     }
     private void checkAndRequestPermissions() {

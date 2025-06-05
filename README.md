@@ -12,4 +12,4 @@
 
 Практика 6 + MireaProject
 
-Практика 7
+Практика 7 + MireaProject

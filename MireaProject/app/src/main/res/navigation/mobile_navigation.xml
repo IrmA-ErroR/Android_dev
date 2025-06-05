@@ -20,8 +20,9 @@
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.mirea.kabanovasvetlana.mireaproject.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
 
     <fragment
         android:id="@+id/nav_data"
@@ -71,6 +72,12 @@
         android:id="@+id/nav_files"
         android:name="com.mirea.kabanovasvetlana.mireaproject.FilesFragment"
         android:label="Файлы"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_files" />
+
+    <fragment
+        android:id="@+id/nav_network"
+        android:name="com.mirea.kabanovasvetlana.mireaproject.NetworkFragment"
+        android:label="Фаза Луны"
+        tools:layout="@layout/fragment_network" />
 
 </navigation>

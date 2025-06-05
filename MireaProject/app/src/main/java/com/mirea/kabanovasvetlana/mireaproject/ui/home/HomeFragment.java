@@ -9,7 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
+import com.mirea.kabanovasvetlana.mireaproject.R;
 import com.mirea.kabanovasvetlana.mireaproject.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -26,6 +31,10 @@ public class HomeFragment extends Fragment {
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        binding.buttonMoonPhase.setOnClickListener(v -> {
+            NavHostFragment.findNavController(this).navigate(R.id.nav_network);
+        });
+
         return root;
     }
 

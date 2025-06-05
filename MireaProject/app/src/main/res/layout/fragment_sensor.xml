@@ -14,6 +14,6 @@
         android:text="-- °C"
         android:textAlignment="center"
         android:textColor="#FF000000"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
 </FrameLayout>
