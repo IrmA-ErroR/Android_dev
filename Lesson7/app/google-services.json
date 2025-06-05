@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "842426145724",
+    "project_id": "testproject-44fb3",
+    "storage_bucket": "testproject-44fb3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842426145724:android:71c1cce6c364c4bed829b9",
+        "android_client_info": {
+          "package_name": "com.mirea.kabanovasvetlana.lesson7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842426145724-3hnlvpukl34npgfpd9342tspvmtgtqod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDISF-sRDTmvqMr8hvh245P5775LBFXVDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842426145724-3hnlvpukl34npgfpd9342tspvmtgtqod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
